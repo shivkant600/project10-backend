@@ -1,6 +1,5 @@
 package com.rays.dto;
 
-import java.util.Date;
 import java.util.LinkedHashMap;
 
 import javax.persistence.Column;
@@ -10,32 +9,44 @@ import javax.persistence.Table;
 import com.rays.common.BaseDTO;
 
 @Entity
-@Table(name = "ST_COMPLAINT")
-public class ComplaintDTO extends BaseDTO {
+@Table(name = "ST_DEVICE")
+public class DeviceDTO extends BaseDTO {
 	
-	@Column(name = "issueType", length = 50)
-	private String issueType;
 	
-	@Column(name = "createdDate", length = 50)
-	private Date createdDate;
+	@Column(name = "deviceCode", length = 50)
+	private String deviceCode;
+	
+	@Column(name = "deviceName", length = 50)
+	private String deviceName;
+	
+	@Column(name = "userName", length = 50)
+	private String userName;
 	
 	@Column(name = "status", length = 50)
 	private String status;
 
-	public String getIssueType() {
-		return issueType;
+	public String getDeviceCode() {
+		return deviceCode;
 	}
 
-	public void setIssueType(String issueType) {
-		this.issueType = issueType;
+	public void setDeviceCode(String deviceCode) {
+		this.deviceCode = deviceCode;
 	}
 
-	public Date getCreatedDate() {
-		return createdDate;
+	public String getDeviceName() {
+		return deviceName;
 	}
 
-	public void setCreatedDate(Date createdDate) {
-		this.createdDate = createdDate;
+	public void setDeviceName(String deviceName) {
+		this.deviceName = deviceName;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getStatus() {
@@ -48,42 +59,41 @@ public class ComplaintDTO extends BaseDTO {
 
 	@Override
 	public String getValue() {
-		// TODO Auto-generated method stub
-		return issueType;
+		
+		return "deviceCode";
 	}
 
 	@Override
 	public String getUniqueKey() {
-		// TODO Auto-generated method stub
-		return "issueType";
+		
+		return "deviceCode";
 	}
 
 	@Override
 	public String getUniqueValue() {
-		// TODO Auto-generated method stub
-		return issueType;
+				return deviceCode;
 	}
 
 	@Override
 	public String getLabel() {
-		// TODO Auto-generated method stub
-		return "issueType";
+		
+		return "deviceCode";
 	}
 
 	@Override
 	public LinkedHashMap<String, String> orderBY() {
 		LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
-		map.put("issueType", "asc");
+		map.put("deviceCode", "asc");
 
 		return map;
 	}
 
 	@Override
 	public LinkedHashMap<String, Object> uniqueKeys() {
+	
 		LinkedHashMap<String, Object> map = new LinkedHashMap<String, Object>();
-		map.put("issueType", issueType);
-		return map;
-	}
+		map.put("deviceCode", deviceCode);
+		return map;	}
 	
 
 }
