@@ -2,7 +2,6 @@ package com.rays.form;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-
 import com.rays.common.BaseDTO;
 import com.rays.common.BaseForm;
 import com.rays.dto.BatchDTO;

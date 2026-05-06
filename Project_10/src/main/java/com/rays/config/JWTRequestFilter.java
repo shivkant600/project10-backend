@@ -78,7 +78,7 @@ public class JWTRequestFilter extends OncePerRequestFilter {
 
 			} catch (Exception e) {
 
-				// DB related exceptions → return 503 directly
+			
 
 				if (e instanceof org.springframework.transaction.CannotCreateTransactionException
 
