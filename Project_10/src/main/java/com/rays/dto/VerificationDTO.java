@@ -59,25 +59,25 @@ public class VerificationDTO extends BaseDTO{
 	@Override
 	public String getValue() {
 		// TODO Auto-generated method stub
-		return "userName";
+		return "code";
 	}
 
 	@Override
 	public String getUniqueKey() {
 		// TODO Auto-generated method stub
-		return "userName";
+		return "code";
 	}
 
 	@Override
 	public String getUniqueValue() {
 		
-		return userName;
+		return code;
 	}
 
 	@Override
 	public String getLabel() {
 		
-		return "userName";
+		return "code";
 	}
 
 	@Override
